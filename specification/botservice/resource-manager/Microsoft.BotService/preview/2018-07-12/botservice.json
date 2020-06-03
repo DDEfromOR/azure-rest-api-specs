@@ -317,6 +317,9 @@
           },
           "Create Line Bot": {
             "$ref": "./examples/PutLineChannel.json"
+          },
+          "Create DirectLine Speech Bot": {
+            "$ref": "./examples/PutDirectLineSpeechChannel.json"
           }
         },
         "parameters": [
@@ -381,6 +384,9 @@
           },
           "Update Line":{
             "$ref": "./examples/UpdateLineChannel.json"
+          },
+          "Update DirectLine Speech": {
+            "$ref": "./examples/UpdateDirectLineSpeechChannel.json"
           }
         },
         "parameters": [
@@ -496,6 +502,9 @@
           },
           "Get Line Bot": {
             "$ref": "./examples/GetLineChannel.json"
+          },
+          "Get DirectLine Speech Bot": {
+            "$ref": "./examples/GetDirectLineSpeechChannel.json"
           }
         },
         "parameters": [
