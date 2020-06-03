@@ -2888,7 +2888,7 @@
         "DirectLineChannel",
         "SmsChannel",
         "LineChannel",
-        "DIrectLineSpeechChannel"
+        "DirectLineSpeechChannel"
       ],
       "x-ms-enum": {
         "name": "channelName",
