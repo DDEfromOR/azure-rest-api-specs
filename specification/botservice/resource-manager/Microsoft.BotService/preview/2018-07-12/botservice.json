@@ -446,6 +446,9 @@
         "x-ms-examples": {
           "Delete Bot": {
             "$ref": "./examples/DeleteChannel.json"
+          },
+          "Delete DirectLine Speech Bot": {
+            "$ref": "./examples/DeleteDirectLineSpeechChannel.json"
           }
         },
         "parameters": [
