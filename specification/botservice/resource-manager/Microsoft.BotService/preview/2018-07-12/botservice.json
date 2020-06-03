@@ -2131,7 +2131,7 @@
       "properties": {
         "properties": {
           "$ref": "#/definitions/LineChannelProperties",
-          "description": "The set of properties specific to Slack channel resource"
+          "description": "The set of properties specific to line channel resource"
         }
       }
     },
@@ -2180,6 +2180,50 @@
         }
       },
       "description": "The properties corresponding to a line channel registration"
+    },
+    "DirectLineSpeechChannel": {
+      "type": "object",
+      "description": "DirectLine Speech channel definition",
+      "x-ms-discriminator-value": "DirectLineSpeechChannel",
+      "allOf": [
+        {
+          "$ref": "#/definitions/Channel"
+        }
+      ],
+      "properties": {
+        "properties": {
+          "$ref": "#/definitions/DirectLineSpeechChannelProperties",
+          "description": "The set of properties specific to DirectLine Speech channel resource"
+        }
+      }
+    },
+    "DirectLineSpeechChannelProperties": {
+      "properties": {
+        "cognitiveServicesSubscriptionId": {
+          "type": "string",
+          "description": "The cognitive service subscription ID to use with this channel registration."
+        },
+        "isEnabled": {
+          "type": "boolean",
+          "description": "Whether this channel is enabled or not."
+        },
+        "customVoiceDeploymentId": {
+          "type": "string",
+          "description": "Custom speech model id (optional)."
+        },
+        "customSpeechModelId": {
+          "type": "string",
+          "description": "Custom voice deployment id (optional)."
+        },
+        "isDefaultBotForCogSvcAccount": {
+          "type": "boolean",
+          "description": "Make this a default bot for chosen cognitive service account."
+        }
+      },
+      "description": "The parameters to provide for the DirectLine Speech channel.",
+      "required": [
+        "cognitiveServicesSubscriptionId"
+      ]
     },
     "ChannelResponseList": {
       "properties": {
@@ -2843,7 +2887,8 @@
         "WebChatChannel",
         "DirectLineChannel",
         "SmsChannel",
-        "LineChannel"
+        "LineChannel",
+        "DIrectLineSpeechChannel"
       ],
       "x-ms-enum": {
         "name": "channelName",
@@ -2884,6 +2929,9 @@
           },
           {
             "value": "LineChannel"
+          },
+          {
+            "value": "DirectLineSpeechChannel"
           }
         ]
       },
